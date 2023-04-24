@@ -53,8 +53,9 @@ h1 {
 	color: white;
 }
 
-p {
+h2 {
 	color: white;
+	font-size: 1.5rem;
 }
 
 /* SCORE & TIMER CSS */
@@ -112,6 +113,6 @@ p {
 }
 
 /* PERSONA CSS */
-.mole {
+.voldemort {
 	background-color: black;
 }
