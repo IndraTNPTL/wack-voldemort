@@ -1,6 +1,13 @@
+// GAME VARIABLES
 const score = document.getElementById("score");
 const startBtn = document.getElementById("start-game");
 const allHoles = document.querySelectorAll(".hole");
+
+// AUDIO VARIABLES
+const audioBeforeStart = document.getElementById("audioBeforeStart");
+const audioAfterStart = document.getElementById("audioAfterStart");
+const startAudioBtn = document.getElementById("startAudio");
+const toggleAudio = document.getElementById("toggleAudio");
 
 function startGame() {
 	const gameInterval = peep();
@@ -63,6 +70,31 @@ function peep() {
 }
 
 // EVENT LISTENERS
-startBtn.addEventListener("click", startGame);
+// startBtn.addEventListener("click", startGame);
 
-// AU clic sur la case qui a la class voldemort, le score s'incremente de +1
+let audioEnabled = true;
+startAudioBtn.addEventListener("click", () => {
+	audioBeforeStart.play();
+});
+
+startBtn.addEventListener("click", () => {
+	audioBeforeStart.pause();
+	audioAfterStart.play();
+	startGame();
+});
+
+// toggleAudio.addEventListener("click", () => {
+// 	if (audioEnabled) {
+// 		audioBeforeStart.pause();
+// 		audioAfterStart.pause();
+// 		toggleAudio.textContent = "Enable Audio";
+// 	} else {
+// 		if (!audioEnabled) {
+// 			audioAfterStart.play();
+// 		} else {
+// 			audioBeforeStart.play();
+// 		}
+// 		toggleAudio.textContent = "Disable Audio";
+// 	}
+// 	audioEnabled = !audioEnabled;
+// });
