@@ -1,18 +1,28 @@
-// const data = require("./data");
+const score = document.getElementById("score");
+const timer = document.getElementById("timer");
+const startBtn = document.getElementById("start-game");
 
-// Automatic set up the grid of the game board for html
-// window.onload = function () {
-// 	setGame();
-// };
+function startGame() {
+	const peepInterval = peep();
 
-// function setGame() {
-// 	for (let i = 0; i < 9; i++) {
-// 		let tileHole = document.createElement("div");
-// 		// Giving the tiles an unique ID
-// 		tileHole.id = "tile " + i.toString();
-// 		// Inserting the tiles in the HTML
-// 		document.getElementById("gameboard").appendChild(tileHole);
-// 	}
-// }
+	setTimeout(() => {
+		clearInterval(peepInterval);
+	}, 120000);
+}
 
-function startGame() {}
+function peep() {
+	const allHoles = document.querySelectorAll(".hole");
+
+	// At intervals = Choose a random hole -> Add class .mole -> Remove class .mole after a certain time
+	return setInterval(() => {
+		const hole = allHoles[Math.floor(Math.random() * allHoles.length)];
+		hole.classList.add("mole");
+
+		setTimeout(() => {
+			hole.classList.remove("mole");
+		}, 1200);
+	}, 2000);
+}
+
+// EVENT LISTENERS
+startBtn.addEventListener("click", startGame);

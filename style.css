@@ -94,9 +94,9 @@ p {
 #gridboard {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-
+	max-width: 30rem;
 	width: 67vw;
-	height: 28.5em;
+	/* height: 28.5em; */
 
 	background-color: grey;
 
@@ -104,14 +104,14 @@ p {
 }
 
 /* HOLE CSS */
-
 .hole {
 	overflow: hidden;
 	background-color: greenyellow;
 	border: 1px solid black;
+	aspect-ratio: 1;
 }
 
 /* PERSONA CSS */
-
 .mole {
+	background-color: black;
 }
