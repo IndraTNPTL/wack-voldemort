@@ -5,25 +5,63 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Whack Voldermort</title>
+		<!-- FAVICON -->
+		<link
+			rel="icon"
+			type="image/icon"
+			href="./img/deathly-hallows-favicon.ico.png"
+		/>
 		<!-- LINK THE STYLES HERE -->
 		<link rel="stylesheet" href="./style.css" />
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;1,300&display=swap");
-		</style>
 		<!-- LINK THE "index.js" JAVASCRIPT FILE -->
 		<script type="module" src="./game.js"></script>
 	</head>
+
+	<!-- BODY CODE STARTS -->
 	<body>
 		<h1>Whack Voldemort</h1>
-		<h2 id="score">0</h2>
-		<div id="gameboard"></div>
-
-		<button id="start-game">Start game</button>
-
-		<dialog id="end-game">
-			<h1>You loooooose !!!!!</h1>
-
-			<button id="restart">Try again...</button>
-		</dialog>
+		<!-- SCORE & TIMER -->
+		<p>
+			Score : <span id="score">0</span> Time left :
+			<span id="timer">03:00</span>
+		</p>
+		<!-- START GAME BTN -->
+		<div class="start-btn-div">
+			<button id="start-game">Start game</button>
+		</div>
+		<!-- GAMEBOARD CODE STARTS -->
+		<div id="board">
+			<div id="gridboard">
+				<div class="hole hole1">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole2">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole3">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole4">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole5">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole6">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole7">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole8">
+					<div class="mole"></div>
+				</div>
+				<div class="hole hole9">
+					<div class="mole"></div>
+				</div>
+			</div>
+		</div>
+		<!-- GAMEBOARD CODE ENDS -->
 	</body>
+	<!-- BODY CODE ENDS -->
 </html>
