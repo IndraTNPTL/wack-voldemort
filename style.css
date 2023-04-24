@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@font-face {
+	font-family: "pac-font";
+	src: url("./../resource/crackman.ttf") format("truetype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Press Start 2P", cursive;
+}
+
+body {
+	text-align: center;
+	background-color: black;
+}
+
+h1 {
+	color: white;
+	margin: 1.5rem 0;
+}
+
+h2 {
+	color: white;
+	margin-bottom: 1rem;
+}
+
+#gameboard {
+	height: calc(80vh - 5rem);
+	aspect-ratio: 9/16;
+	background-color: white;
+	border: 3px solid greenyellow;
+	border-radius: 25px;
+
+	-webkit-animation: BorderGame 4s ease infinite;
+	-moz-animation: BorderGame 4s ease infinite;
+	animation: BorderGame 4s ease infinite;
+
+	margin: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#start-game {
+	margin: 1rem;
+	padding: 0.8rem;
+}
+
+#gameboard div {
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+	background-size: cover;
+}
