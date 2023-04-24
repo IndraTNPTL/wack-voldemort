@@ -3,10 +3,10 @@ const timer = document.getElementById("timer");
 const startBtn = document.getElementById("start-game");
 
 function startGame() {
-	const peepInterval = peep();
+	const gameInterval = peep();
 
 	setTimeout(() => {
-		clearInterval(peepInterval);
+		clearInterval(gameInterval);
 	}, 120000);
 }
 
