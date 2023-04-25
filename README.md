@@ -2,7 +2,14 @@
 
 Globally a wack a mole game but with Voldemort head XD
 
-As a proud and loyal Hufflepuff, take revenge for Cedric Diggory's death during the Goblet of Fire competition and wack Voldemort!
+As a proud and loyal Hogward student / Hufflepuff, take revenge for Cedric Diggory's death during the Goblet of Fire competition and wack Voldemort!
+
+But be careful, Dobby (as usual) is hanging around places that he is not supposed to and could be hit by your spell.
+
+Everytime you hit Voldemort, you gain 1 point.
+But if Dobby is hits, you'll loose 2 points.
+
+Try to reach 70 pts in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
 
 <!-- Repository link -->
 

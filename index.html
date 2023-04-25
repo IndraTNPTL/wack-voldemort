@@ -5,14 +5,17 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Whack Voldermort</title>
+
 		<!-- FAVICON -->
 		<link
 			rel="icon"
 			type="image/icon"
 			href="./img/deathly-hallows-favicon.ico.png"
 		/>
+
 		<!-- LINK THE STYLES HERE -->
 		<link rel="stylesheet" href="./style.css" />
+
 		<!-- LINK THE "index.js" JAVASCRIPT FILE -->
 		<script type="module" src="./game.js"></script>
 	</head>
@@ -20,13 +23,8 @@
 	<!-- BODY CODE STARTS -->
 	<body>
 		<h1>Whack Voldemort</h1>
-		<!-- SCORE & TIMER -->
-		<h2>Score : <span id="score">0</span></h2>
-		<div id="timer">
-			<h2>Time left : <span id="timerCountdown">01:30</span></h2>
-			<!-- START GAME BTN -->
-			<button id="start-game">Start game</button>
-		</div>
+
+		<!-- AUDIO CODE STARTS -->
 		<!-- <audio id="audioBeforeStart" loop>
 			<source
 				src="./audios/Harry Potter Theme Song_Htaj3o3JD8I.mp3"
@@ -43,38 +41,47 @@
 				loading="lazy"
 			/>
 		</audio> -->
-		<button id="startAudio">Start Audio</button>
+		<!-- <button id="startAudio">Start Audio</button> -->
 		<!-- <button id="toggleAudio">Toggle Audio</button> -->
 
-		<!-- GAMEBOARD CODE STARTS -->
-		<div id="board">
-			<div id="gridboard">
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
-				</div>
-				<div class="hole">
-					<div class="voldemort"><div id="dobby"></div></div>
+		<!-- LANDIND PAGE -->
+		<div id="landing-page">
+			<article id="game-rules"></article>
+			<button id="go-to-house-cta"></button>
+		</div>
+
+		<!-- CHOOSE YA HOUSE PAGE -->
+		<div id="choose-house">
+			<div class="house-carrousel">
+				<div id="left-arrow"></div>
+				<img src="" alt="" />
+				<div id="right-arrow"></div>
+			</div>
+		</div>
+
+		<!-- GAMEBOARD PAGE -->
+		<!-- SCORE & TIMER -->
+		<div id="game-page">
+			<h2>Score : <span id="score">0</span></h2>
+			<div id="timer">
+				<h2>Time left : <span id="timerCountdown">01:30</span></h2>
+
+				<!-- START GAME BTN -->
+				<button id="start-game">Start game</button>
+			</div>
+
+			<!-- GAMEBOARD CODE STARTS -->
+			<div id="board">
+				<div id="gridboard">
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
 				</div>
 			</div>
 		</div>

@@ -58,6 +58,18 @@ h2 {
 	font-size: 1.5rem;
 }
 
+div#landing-page {
+	display: none;
+}
+
+div#choose-house {
+	display: none;
+}
+
+div#game-page {
+	display: block;
+}
+
 /* SCORE & TIMER CSS */
 #score,
 #timer {
