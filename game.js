@@ -1,8 +1,19 @@
 // GAME VARIABLES
-let score = document.getElementById("score");
+const landingPage = document.getElementById("landing-page");
+const goToGameBtn = document.getElementById("go-to-game-cta");
+const gamePage = document.getElementById("game-page");
 const startBtn = document.getElementById("start-game");
+const restartBtn = document.getElementById("restartBtn");
 const allHoles = document.querySelectorAll(".hole");
+const timer = document.getElementById("timerCountdown");
+const showDialogBtn = document.getElementById("showDialog");
+const resultDialog = document.getElementById("container-dialog-result");
+const winMessage = document.getElementById("winMessage");
+const looseMessage = document.getElementById("looseMessage");
+const gameResult = true;
 
+let timerSeconds = 90;
+let score = document.getElementById("score");
 let gameInterval;
 let gameInProgress = false;
 
@@ -35,9 +46,6 @@ function startGame() {
 }
 
 function countdownDecrease() {
-	const timer = document.getElementById("timerCountdown");
-	let timerSeconds = 90;
-
 	function updateTimer() {
 		const minutes = Math.floor(timerSeconds / 60)
 			.toString()
@@ -54,8 +62,10 @@ function countdownDecrease() {
 		if (timerSeconds <= 0) {
 			clearInterval(countdown);
 			gameInProgress = false;
-			if (parseInt(score.textContent) >= 45) {
+			if (parseInt(score.textContent) >= 50) {
 				displayWinMessage();
+			} else if (parseInt(score.textContent) < 50) {
+				displayLooseMessage();
 			}
 		}
 	}, 1000);
@@ -83,7 +93,7 @@ function peep() {
 
 		setTimeout(() => {
 			hole.classList.remove("voldemort");
-		}, 1000);
+		}, 1200);
 	}
 
 	// At intervals = Choose a random hole -> Add class .dobby -> Remove class .voldemort after a certain time
@@ -93,44 +103,36 @@ function peep() {
 
 		setTimeout(() => {
 			hole.removeAttribute("id");
-		}, 1200);
+		}, 1400);
 	}
 
-	const volId = setInterval(voldemortAppears, 1200);
-	const dobbyId = setInterval(dobbyAppears, 2000);
+	const volId = setInterval(voldemortAppears, 1000);
+	const dobbyId = setInterval(dobbyAppears, 3000);
 	return [volId, dobbyId];
 }
 
 function displayWinMessage() {
-	// Put here the possibility to display block my Win message
+	winMessage.style.display = "block";
+	looseMessage.style.display = "none";
+	resultDialog.showModal();
+}
+
+function displayLooseMessage() {
+	looseMessage.style.display = "block";
+	winMessage.style.display = "none";
+	resultDialog.showModal();
 }
 
 // EVENT LISTENERS
 startBtn.addEventListener("click", startGame);
 
-// let audioEnabled = true;
-// startAudioBtn.addEventListener("click", () => {
-// 	audioBeforeStart.play();
-// });
+goToGameBtn.addEventListener("click", () => {
+	gamePage.style.display = "block";
+	landingPage.style.display = "none";
+});
 
-// startBtn.addEventListener("click", () => {
-// 	audioBeforeStart.pause();
-// 	audioAfterStart.play();
-// 	startGame();
-// });
-
-// toggleAudio.addEventListener("click", () => {
-// 	if (audioEnabled) {
-// 		audioBeforeStart.pause();
-// 		audioAfterStart.pause();
-// 		toggleAudio.textContent = "Enable Audio";
-// 	} else {
-// 		if (!audioEnabled) {
-// 			audioAfterStart.play();
-// 		} else {
-// 			audioBeforeStart.play();
-// 		}
-// 		toggleAudio.textContent = "Disable Audio";
-// 	}
-// 	audioEnabled = !audioEnabled;
-// });
+restartBtn.addEventListener("click", () => {
+	gamePage.style.display = "none";
+	landingPage.style.display = "block";
+	resultDialog.closeModal();
+});

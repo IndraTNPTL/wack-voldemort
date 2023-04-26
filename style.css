@@ -24,7 +24,8 @@
 
 *,
 *:before,
-*:after {
+*:after,
+*:hover {
 	box-sizing: border-box;
 }
 
@@ -54,20 +55,44 @@ h1 {
 }
 
 h2 {
-	color: white;
 	font-size: 1.5rem;
 }
 
-div#landing-page {
-	display: none;
+div#game-page h2 {
+	color: white;
 }
 
-div#choose-house {
-	display: none;
+p {
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+button {
+	padding: 0.5rem;
+
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	cursor: pointer;
+}
+
+div#landing-page {
+	display: block;
+}
+
+#game-rules-section {
+	margin: 9% 10% 5% 10%;
+	padding: 2% 2% 4% 2%;
+	border-radius: 7px;
+	background-color: whitesmoke;
+}
+
+#go-to-game-cta {
+	border: 2px solid rgb(236, 185, 57);
+	border-radius: 5px;
 }
 
 div#game-page {
-	display: block;
+	display: none;
 }
 
 /* SCORE & TIMER CSS */
@@ -83,11 +108,11 @@ div#game-page {
 
 /* START GAME BTN */
 #start-game {
-	margin: 1rem;
+	/* margin: 1rem;
 	padding: 0.5rem;
 
 	font-family: "Poppins", sans-serif;
-	text-align: center;
+	text-align: center; */
 }
 
 /* GAMEBOARD CSS */
@@ -132,3 +157,60 @@ div#game-page {
 #dobby {
 	background-color: blue;
 }
+
+/* RESULT MODALS */
+
+button#showDialog {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button#restartBtn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+dialog#container-dialog-result {
+	margin: auto;
+	/* width: 300px; */
+	/* padding: 20px; */
+
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#winMessage {
+	display: none;
+}
+
+#looseMessage {
+	display: none;
+}
+
+/* TO DELETE IF NOT NEEDED */
+/* .container-modal {
+}
+
+#win-modal-content {
+	display: block;
+	z-index: 1;
+	margin: 0 auto;
+	position: fixed;
+}
+
+#loose-modal-content {
+	display: block;
+	z-index: 1;
+	margin: 0 auto;
+	position: fixed;
+} */
