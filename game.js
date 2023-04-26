@@ -18,17 +18,16 @@ let gameInterval;
 let gameInProgress = false;
 
 // AUDIO VARIABLES
-// const audioBeforeStart = document.getElementById("audioBeforeStart");
-// const audioAfterStart = document.getElementById("audioAfterStart");
-// const startAudioBtn = document.getElementById("startAudio");
-// const toggleAudio = document.getElementById("toggleAudio");
+const audioBeforeStart = document.getElementById("audioBeforeStart");
+const audioAfterStart = document.getElementById("audioAfterStart");
+const startAudioBtn = document.getElementById("startAudio");
+const toggleAudio = document.getElementById("toggleAudio");
 
 function startGame() {
 	// "If statement" to prevent the game from being launch multiple times with rageclick
 	if (gameInProgress) {
 		return;
 	}
-
 	gameInProgress = true;
 
 	// Calling the countdown function
@@ -124,15 +123,26 @@ function displayLooseMessage() {
 }
 
 // EVENT LISTENERS
-startBtn.addEventListener("click", startGame);
 
 goToGameBtn.addEventListener("click", () => {
 	gamePage.style.display = "block";
 	landingPage.style.display = "none";
+	// audioBeforeStart.play();
+});
+
+startBtn.addEventListener("click", () => {
+	startGame();
+	startBtn.style.display = "none";
 });
 
 restartBtn.addEventListener("click", () => {
 	gamePage.style.display = "none";
 	landingPage.style.display = "block";
-	resultDialog.closeModal();
+	resultDialog.close();
+});
+
+showDialogBtn.addEventListener("click", () => {
+	looseMessage.style.display = "block";
+	winMessage.style.display = "none";
+	resultDialog.showModal();
 });

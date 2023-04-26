@@ -232,8 +232,9 @@
 					Hit Voldemort and you gain 1 point. <br />
 					Hit Dobby, you'll loose 2 points. <br />Reach 50 score pts
 					and win against The Dark Lord Who-Must-Not-Be-Named...or
-					die. <br />Avenge Cedric and the Hufflepuff house!
+					die.
 				</p>
+				<p>Avenge Cedric and the Hufflepuff house!</p>
 			</section>
 			<button id="go-to-game-cta">Let's Go</button>
 		</div>
@@ -252,38 +253,105 @@
 
 		<div id="game-page">
 			<h1>Whack Voldemort</h1>
-			<h2>Score : <span id="score">0</span></h2>
-			<div id="timer">
-				<h2>Time left : <span id="timerCountdown">01:30</span></h2>
 
-				<!-- START GAME BTN -->
-				<button id="start-game">Start game</button>
+			<div id="timer">
+				<h2 class="game-infos">Score : <span id="score">0</span></h2>
+				<h2 class="game-infos">
+					Time left : <span id="timerCountdown">01:30</span>
+				</h2>
 			</div>
+
+			<!-- START GAME BTN -->
+			<button id="start-game">Start game</button>
 
 			<!-- GAMEBOARD CODE STARTS -->
 			<div id="board">
 				<div id="gridboard">
-					<div class="hole"></div>
-					<div class="hole"></div>
-					<div class="hole"></div>
-					<div class="hole"></div>
-					<div class="hole"></div>
-					<div class="hole"></div>
-					<div class="hole"></div>
-					<div class="hole"></div>
-					<div class="hole"></div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
+					<div class="hole">
+						<img
+							src="./img/golden-cup-with-badger-white-background_622487-942.avif"
+							alt="hufflepuff golden cup"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- GAMEBOARD CODE ENDS -->
 
 		<!-- RESULT MODAL -->
-		<!-- <button id="showDialog">Show Dialog</button> -->
+		<button id="showDialog">Show Dialog</button>
 		<dialog id="container-dialog-result">
 			<p id="winMessage">Congratulations! You won against the Dark!</p>
 			<p id="looseMessage">Sorry but you have been Avada "Kadavred"</p>
 			<button id="restartBtn" value="default">Revenge again!</button>
 		</dialog>
+		<!-- AUDIO CODE STARTS -->
+		<!-- <audio id="audioBeforeStart" loop>
+			<source
+				src="./audios/Harry Potter Theme Song_Htaj3o3JD8I.mp3"
+				type="audio/mpeg"
+				allow="autoplay"
+				loading="lazy"
+			/>
+		</audio>
+		<audio id="audioAfterStart" loop>
+			<source
+				src="./audios/Courtyard Apocalypse (Battle of Hogwarts Theme) _ EPIC BATTLE VERSION_nVZcg_gzWqU.mp3"
+				type="audio/mpeg"
+				allow="autoplay"
+				loading="lazy"
+			/>
+		</audio> -->
+		<!-- <button id="startAudio">Start Audio</button> -->
+		<!-- <button id="toggleAudio">Toggle Audio</button> -->
 	</body>
 	<!-- BODY CODE ENDS -->
 </html>
@@ -301,23 +369,3 @@
 				<button class="replay">Try again</button>
 			</div>
 		</div> -->
-
-<!-- AUDIO CODE STARTS -->
-<!-- <audio id="audioBeforeStart" loop>
-			<source
-				src="./audios/Harry Potter Theme Song_Htaj3o3JD8I.mp3"
-				type="audio/mpeg"
-				allow="autoplay"
-				loading="lazy"
-			/>
-		</audio>
-		<audio id="audioAfterStart" loop>
-			<source
-				src="./audios/Courtyard Apocalypse (Battle of Hogwarts Theme) _ EPIC BATTLE VERSION_nVZcg_gzWqU.mp3"
-				type="audio/mpeg"
-				allow="autoplay"
-				loading="lazy"
-			/>
-		</audio> -->
-<!-- <button id="startAudio">Start Audio</button> -->
-<!-- <button id="toggleAudio">Toggle Audio</button> -->

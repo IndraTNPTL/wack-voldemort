@@ -1,11 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-@font-face {
-	font-family: "pac-font";
-	src: url("./../resource/crackman.ttf") format("truetype");
-} */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,600;1,700&display=swap");
 
 /* @font-face {
 	font-family: "Harry Potter";
@@ -22,11 +16,19 @@
 			format("svg");
 } */
 
+@font-face {
+	font-family: "Harry Potter";
+	src: url("./Fonts/harry_p/HARRYP__.TTF") format("truetype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,600;1,700&display=swap");
+
 *,
 *:before,
 *:after,
 *:hover {
 	box-sizing: border-box;
+	margin: 0;
 }
 
 html {
@@ -50,12 +52,19 @@ body {
 h1 {
 	margin-top: 1.5rem;
 	text-align: center;
+	/* font-family: "Harry Potter"; */
+	font-size: 30px;
 
 	color: white;
 }
 
 h2 {
 	font-size: 1.5rem;
+}
+
+h2.game-infos {
+	display: flex;
+	flex-direction: column;
 }
 
 div#game-page h2 {
@@ -75,8 +84,9 @@ button {
 	cursor: pointer;
 }
 
+/* LANDING PAGE */
 div#landing-page {
-	display: block;
+	display: none;
 }
 
 #game-rules-section {
@@ -91,14 +101,17 @@ div#landing-page {
 	border-radius: 5px;
 }
 
+/* GAME PAGE */
 div#game-page {
-	display: none;
+	display: block;
 }
 
 /* SCORE & TIMER CSS */
-#score,
 #timer {
-	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 2% 0;
 
 	font-family: "Poppins", sans-serif;
 	font-size: 1.5rem;
@@ -108,20 +121,16 @@ div#game-page {
 
 /* START GAME BTN */
 #start-game {
-	/* margin: 1rem;
-	padding: 0.5rem;
-
-	font-family: "Poppins", sans-serif;
-	text-align: center; */
+	margin-bottom: 1.5rem;
 }
 
 /* GAMEBOARD CSS */
 #board {
 	background-color: white;
-	width: 80vw;
-	height: 35rem;
+	width: 90vw;
+	height: 38rem;
 
-	border: 4px solid rgb(236, 185, 57);
+	/* border: 4px solid rgb(236, 185, 57); */
 	border-radius: 25px;
 
 	display: flex;
@@ -132,9 +141,10 @@ div#game-page {
 #gridboard {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	max-width: 30rem;
-	width: 67vw;
-	/* height: 28.5em; */
+	max-width: 42em;
+	/* width: 67vw;*/
+	row-gap: 2%;
+	column-gap: 5%;
 
 	background-color: grey;
 
@@ -143,10 +153,20 @@ div#game-page {
 
 /* HOLE CSS */
 .hole {
-	overflow: hidden;
-	background-color: greenyellow;
-	border: 1px solid black;
+	background-color: white;
+
+	border: 0.4px solid lightsteelblue;
 	aspect-ratio: 1;
+	overflow: hidden;
+}
+
+.hole > img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	top: 38%;
 }
 
 /* PERSONA CSS */
