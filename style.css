@@ -15,10 +15,33 @@
 		url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.svg#Harry Potter")
 			format("svg");
 } */
+@keyframes moving-border {
+	0% {
+		border-color: #fff;
+		transform: translateY(0px);
+	}
+	50% {
+		border-color: #fff;
+		transform: translateY(10px);
+	}
+	100% {
+		border-color: #fff;
+		transform: translateY(0px);
+	}
+}
 
 @font-face {
 	font-family: "Harry Potter";
-	src: url("./Fonts/harry_p/HARRYP__.TTF") format("truetype");
+	src: url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.woff")
+			format("woff"),
+		url("harryp__-webfont.woff2") format("woff2"),
+		url("harryp__-webfont.woff") format("woff");
+}
+
+@font-face {
+	font-family: "benneregular";
+	src: url("benne-regular-webfont.woff2") format("woff2"),
+		url("benne-regular-webfont.woff") format("woff");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,600;1,700&display=swap");
@@ -33,6 +56,7 @@
 
 html {
 	box-sizing: border-box;
+	/* background-color: rgb(55, 46, 41); */
 	background-color: rgb(55, 46, 41);
 }
 
@@ -52,14 +76,16 @@ body {
 h1 {
 	margin-top: 1.5rem;
 	text-align: center;
-	/* font-family: "Harry Potter"; */
-	font-size: 30px;
+	font-family: "Harry Potter";
+	font-size: 3.3rem;
+	letter-spacing: 0.2em;
 
-	color: white;
+	color: rgb(236, 185, 57);
 }
 
 h2 {
 	font-size: 1.5rem;
+	color: rgb(114, 98, 85);
 }
 
 h2.game-infos {
@@ -68,7 +94,7 @@ h2.game-infos {
 }
 
 div#game-page h2 {
-	color: white;
+	color: rgb(114, 98, 85);
 }
 
 p {
@@ -86,6 +112,10 @@ button {
 
 /* LANDING PAGE */
 div#landing-page {
+	display: block;
+}
+
+div#rule-step {
 	display: none;
 }
 
@@ -103,7 +133,7 @@ div#landing-page {
 
 /* GAME PAGE */
 div#game-page {
-	display: block;
+	display: none;
 }
 
 /* SCORE & TIMER CSS */
@@ -111,24 +141,75 @@ div#game-page {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	margin: 2% 0;
+	margin: 1% auto;
 
 	font-family: "Poppins", sans-serif;
 	font-size: 1.5rem;
 	text-align: center;
-	color: white;
+	/* color: white; */
+	width: 70%;
 }
 
 /* START GAME BTN */
-#start-game {
+/* #start-game {
 	margin-bottom: 1.5rem;
+	font-weight: bold;
+	font-size: 1.3em;
+	letter-spacing: 1px;
+	border-radius: 27px;
+	border: 3px solid transparent;
+
+	padding: 0.5rem;
+
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	cursor: pointer;
+} */
+#start-game {
+	background-color: rgb(114, 98, 85);
+	color: #fff;
+	border: none;
+	border-radius: 27px;
+	padding: 0.8rem;
+	margin: 1.5rem 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	position: relative;
+	/* overflow: hidden; */
+}
+
+#start-game:hover {
+	color: #ecb939;
+	background-color: #372e29;
+	text-shadow: 0 0 10px #ecb939, 0 0 20px #ecb939, 0 0 30px #ecb939,
+		0 0 40px #ecb939;
+	animation: glowing-text 1s infinite;
+}
+
+@keyframes glowing-text {
+	0% {
+		text-shadow: 0 0 10px #ecb939, 0 0 20px #ecb939, 0 0 30px #ecb939,
+			0 0 40px #ecb939;
+	}
+	50% {
+		text-shadow: 0 0 20px #ecb939, 0 0 30px #ecb939, 0 0 40px #ecb939,
+			0 0 50px #ecb939;
+	}
+	100% {
+		text-shadow: 0 0 10px #ecb939, 0 0 20px #ecb939, 0 0 30px #ecb939,
+			0 0 40px #ecb939;
+	}
 }
 
 /* GAMEBOARD CSS */
 #board {
 	background-color: white;
-	width: 90vw;
-	height: 38rem;
+	width: 80vw;
+	height: 34rem;
 
 	/* border: 4px solid rgb(236, 185, 57); */
 	border-radius: 25px;
@@ -141,10 +222,10 @@ div#game-page {
 #gridboard {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	max-width: 42em;
+	max-width: 32em;
 	/* width: 67vw;*/
-	row-gap: 2%;
-	column-gap: 5%;
+	/* column-gap: 1%; */
+	row-gap: 1%;
 
 	background-color: grey;
 
@@ -192,12 +273,19 @@ button#showDialog {
 
 button#restartBtn {
 	display: inline-block;
-	padding: 10px 20px;
-	background-color: #007bff;
+	background-color: rgb(114, 98, 85);
 	color: #fff;
 	border: none;
-	border-radius: 5px;
+	border-radius: 27px;
+	padding: 0.8rem;
+	margin: 1.5rem 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 1px;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
+	position: relative;
 }
 
 dialog#container-dialog-result {
@@ -205,16 +293,54 @@ dialog#container-dialog-result {
 	/* width: 300px; */
 	/* padding: 20px; */
 
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	border: 3px solid #fff;
+	animation: moving-border 2s infinite;
+	border-radius: 10px;
+	width: 30rem;
 }
 
 #winMessage {
 	display: none;
 }
 
+#winMessage h2 {
+	font-size: 1.3rem;
+	margin: 3%;
+	color: #372e29;
+}
+
 #looseMessage {
 	display: none;
+}
+
+#looseMessage h2 {
+	font-size: 1.3rem;
+	margin: 3%;
+	color: #372e29;
+}
+
+iframe {
+	right: -13%;
+}
+
+@media (max-width: 450px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		font-size: 1.3rem;
+	}
+
+	#gridboard {
+		align-items: flex-end;
+		height: 67vh;
+		border-radius: 25px;
+	}
+
+	#board {
+		height: 34rem !important;
+	}
 }
 
 /* TO DELETE IF NOT NEEDED */

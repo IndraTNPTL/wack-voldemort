@@ -1,5 +1,7 @@
 // GAME VARIABLES
 const landingPage = document.getElementById("landing-page");
+const goToRulesBtn = document.getElementById("go-to-rules-cta");
+const ruleStep = document.getElementById("rule-step");
 const goToGameBtn = document.getElementById("go-to-game-cta");
 const gamePage = document.getElementById("game-page");
 const startBtn = document.getElementById("start-game");
@@ -124,25 +126,32 @@ function displayLooseMessage() {
 
 // EVENT LISTENERS
 
-goToGameBtn.addEventListener("click", () => {
-	gamePage.style.display = "block";
+goToRulesBtn.addEventListener("click", () => {
+	ruleStep.style.display = "block";
 	landingPage.style.display = "none";
 	// audioBeforeStart.play();
+});
+
+goToGameBtn.addEventListener("click", () => {
+	gamePage.style.display = "block";
+	ruleStep.style.display = "none";
 });
 
 startBtn.addEventListener("click", () => {
 	startGame();
 	startBtn.style.display = "none";
+	timer.style.color = "#f0c75e";
+	score.style.color = "#f0c75e";
 });
 
 restartBtn.addEventListener("click", () => {
 	gamePage.style.display = "none";
-	landingPage.style.display = "block";
+	ruleStep.style.display = "block";
 	resultDialog.close();
 });
 
 showDialogBtn.addEventListener("click", () => {
-	looseMessage.style.display = "block";
-	winMessage.style.display = "none";
+	looseMessage.style.display = "none";
+	winMessage.style.display = "block";
 	resultDialog.showModal();
 });

@@ -22,10 +22,19 @@
 
 	<!-- BODY CODE STARTS -->
 	<body>
-		<!-- LANDIND PAGE -->
 		<div id="landing-page">
+			<h2>Hufflepuffs, the time has come!</h2>
+			<p>
+				As a proud and loyal Hufflepuff, take revenge for Cedric
+				Diggory's death during the Goblet of Fire competition and wack
+				Voldemort!
+			</p>
+			<button id="go-to-rules-cta">What's the plan?</button>
+		</div>
+		<!-- LANDIND PAGE -->
+		<div id="rule-step">
 			<section id="game-rules-section">
-				<h2>Hufflepuffs, the time has come!</h2>
+				<h2>Your mission</h2>
 				<p class="rules">
 					This game is basically a Wack-the-moles game, but with
 					Voldemort (yay!)
@@ -105,12 +114,6 @@
 						</g>
 					</g>
 				</svg>
-
-				<p>
-					As a proud and loyal Hufflepuff, take revenge for Cedric
-					Diggory's death during the Goblet of Fire competition and
-					wack Voldemort!
-				</p>
 				<p>
 					But be careful, Dobby (as usual 🙄) is hanging around places
 					that he is not supposed to and could be hit by your spells.
@@ -329,10 +332,51 @@
 		<!-- RESULT MODAL -->
 		<button id="showDialog">Show Dialog</button>
 		<dialog id="container-dialog-result">
-			<p id="winMessage">Congratulations! You won against the Dark!</p>
-			<p id="looseMessage">Sorry but you have been Avada "Kadavred"</p>
+			<div id="winMessage">
+				<h2>Congratulations!<br />You've won against the Dark!</h2>
+				<div
+					style="
+						width: 80%;
+						height: 0;
+						padding-bottom: 43%;
+						position: relative;
+					"
+				>
+					<iframe
+						src="https://giphy.com/embed/sMhnY3mAqq3rq"
+						width="100%"
+						height="100%"
+						style="position: absolute"
+						frameborder="0"
+						class="giphy-embed"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+			<div id="looseMessage">
+				<h2>Sorry but you have been Avada "Kedavred"</h2>
+				<div
+					style="
+						width: 80%;
+						height: 0;
+						padding-bottom: 43%;
+						position: relative;
+					"
+				>
+					<iframe
+						src="https://giphy.com/embed/xT5LMxGzbgJkUZjdte"
+						width="100%"
+						height="100%"
+						style="position: absolute"
+						frameborder="0"
+						class="giphy-embed"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
 			<button id="restartBtn" value="default">Revenge again!</button>
 		</dialog>
+
 		<!-- AUDIO CODE STARTS -->
 		<!-- <audio id="audioBeforeStart" loop>
 			<source
