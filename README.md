@@ -34,3 +34,7 @@ https://www.aldohadinata.com/how-to-make-a-simple-whack-a-mole-game-in-javascrip
 
 <!-- height: calc(80vh - 5rem);
 aspect-ratio: 9/16; -->
+
+<!-- ERRORS -->
+
+Me prendre la tete sur la coupe de hufflepuff comme hole et comment le disposer dans la grille en ne genant pas l'apparition des personnages alors que vrai affictionado saura que la coupe n'existe plus de toute façon dans l'histoire...XD

@@ -25,6 +25,12 @@ const audioAfterStart = document.getElementById("audioAfterStart");
 const startAudioBtn = document.getElementById("startAudio");
 const toggleAudio = document.getElementById("toggleAudio");
 
+function reset() {
+	gameInProgress = false;
+	timerSeconds = 90;
+	score = document.getElementById("score");
+}
+
 function startGame() {
 	// "If statement" to prevent the game from being launch multiple times with rageclick
 	if (gameInProgress) {
@@ -43,7 +49,7 @@ function startGame() {
 		gameInterval.forEach((interval) => {
 			clearInterval(interval);
 		});
-	}, 90000);
+	}, 3000); //CHANGE BEFORE ENDING CODE
 }
 
 function countdownDecrease() {
@@ -91,7 +97,7 @@ function peep() {
 	function voldemortAppears() {
 		const hole = allHoles[Math.floor(Math.random() * allHoles.length)];
 		if (hole.id === "dobby") {
-			hole.removeAttribute("dobby");
+			hole.removeAttribute("id");
 			hole.classList.add("voldemort");
 		}
 
@@ -137,6 +143,7 @@ goToRulesBtn.addEventListener("click", () => {
 
 goToGameBtn.addEventListener("click", () => {
 	gamePage.style.display = "block";
+	gamePage.scrollTop = 0;
 	landingPage.style.display = "none";
 	ruleStep.style.display = "none";
 });
@@ -153,6 +160,7 @@ restartBtn.addEventListener("click", () => {
 	gamePage.style.display = "none";
 	ruleStep.style.display = "none";
 	resultDialog.close();
+	reset();
 });
 
 // TO DELETE WHEN FINISH
