@@ -172,6 +172,7 @@ startBtn.addEventListener("click", () => {
 	score.style.color = "#f0c75e";
 	audioBeforeStart.pause();
 	audioAfterStart.play();
+	allHoles.style.border = "none";
 });
 
 restartBtn.addEventListener("click", () => {
