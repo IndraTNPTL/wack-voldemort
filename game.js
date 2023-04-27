@@ -49,7 +49,7 @@ function startGame() {
 		gameInterval.forEach((interval) => {
 			clearInterval(interval);
 		});
-	}, 3000); //CHANGE BEFORE ENDING CODE
+	}, 90000); //CHANGE BEFORE ENDING CODE
 }
 
 function countdownDecrease() {
@@ -69,6 +69,8 @@ function countdownDecrease() {
 		if (timerSeconds <= 0) {
 			clearInterval(countdown);
 			gameInProgress = false;
+			// audioBeforeStart.play();
+			// audioAfterStart.pause();
 			if (parseInt(score.textContent) >= 50) {
 				displayWinMessage();
 			} else if (parseInt(score.textContent) < 50) {
@@ -153,6 +155,8 @@ startBtn.addEventListener("click", () => {
 	startBtn.style.display = "none";
 	timer.style.color = "#f0c75e";
 	score.style.color = "#f0c75e";
+	// audioBeforeStart.pause();
+	// audioAfterStart.play();
 });
 
 restartBtn.addEventListener("click", () => {
@@ -160,12 +164,14 @@ restartBtn.addEventListener("click", () => {
 	gamePage.style.display = "none";
 	ruleStep.style.display = "none";
 	resultDialog.close();
+	// audioBeforeStart.pause();
+	// audioAfterStart.pause();
 	reset();
 });
 
 // TO DELETE WHEN FINISH
 showDialogBtn.addEventListener("click", () => {
-	looseMessage.style.display = "none";
-	winMessage.style.display = "block";
+	looseMessage.style.display = "block";
+	winMessage.style.display = "none";
 	resultDialog.showModal();
 });
