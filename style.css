@@ -281,7 +281,7 @@ div#game-page {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	max-width: 32em;
-	/* width: 67vw;*/
+	width: 67vw;
 	/* column-gap: 1%; */
 	row-gap: 1%;
 
@@ -320,30 +320,23 @@ div#game-page {
 }
 
 /* PERSONA & CUP CSS */
-.hufflepuff-cup {
+/* .hufflepuff-cup {
 	top: -16% !important;
-}
+} */
 
 .voldemort {
-	display: none; /*TO REMOVE TO CHECK VDM */
+	background-color: #372e29;
+	/* display: block; /*TO REMOVE TO CHECK VDM 
 	position: relative;
 	bottom: 2%;
-	z-index: 1;
-}
-
-.voldemort img {
-	width: 57%;
+	z-index: 1; */
 }
 
 #dobby {
-	/* background-color: blue; */
-	position: relative;
+	background-color: blue;
+	/* position: relative;
 	bottom: 2%;
-	z-index: 1;
-}
-
-#dobby img {
-	width: 57%;
+	z-index: 1; */
 }
 
 /* RESULT MODALS */
