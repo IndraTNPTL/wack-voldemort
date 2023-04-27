@@ -22,6 +22,7 @@
 
 	<!-- BODY CODE STARTS -->
 	<body>
+		<!-- LANDING PAGE -->
 		<div id="landing-page">
 			<img
 				src="./img/pngkey.com-hufflepuff-png-1676554.png"
@@ -42,7 +43,8 @@
 			</div>
 			<button id="go-to-rules-cta">What's the plan?</button>
 		</div>
-		<!-- LANDIND PAGE -->
+
+		<!-- RULES PAGE -->
 		<div id="rule-step">
 			<h2>Your mission</h2>
 			<section id="game-rules-section">
@@ -250,10 +252,10 @@
 				</p>
 				<p>
 					<strong>Hit Dobby,</strong> you'll loose
-					<span class="huffle-yellow">-2 points</span>
+					<span class="huffle-yellow">-3 points</span>
 				</p>
 				<p>
-					<strong>Reach 50 score points and win</strong> against The
+					<strong>Reach 60 score points and win</strong> against The
 					Dark Lord Who-Must-Not-Be-Named
 					<span class="huffle-yellow">...or die</span>.
 				</p>
@@ -267,15 +269,6 @@
 			</section>
 			<button id="go-to-game-cta">Let's Go</button>
 		</div>
-
-		<!-- ITERATION 2 - CHOOSE YA HOUSE PAGE - 
-		<div id="choose-house">
-			<div class="house-carrousel">
-				<div id="left-arrow"></div>
-				<img src="" alt="" />
-				<div id="right-arrow"></div>
-			</div>
-		</div> -->
 
 		<!-- GAMEBOARD PAGE -->
 		<!-- SCORE & TIMER -->
@@ -296,85 +289,22 @@
 			<!-- GAMEBOARD CODE STARTS -->
 			<div id="board">
 				<div id="gridboard">
-					<div class="hole voldemort">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole" id="dobby">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
-					<div class="hole">
-						<!-- <div class="voldemort">
-							<img
-								src="./img/icons8-lord-voldemort-480.png"
-								alt="Lord Voldemort icon"
-							/>
-						</div> -->
-					</div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
+					<div class="hole"></div>
 				</div>
 			</div>
 		</div>
 		<!-- GAMEBOARD CODE ENDS -->
 
 		<!-- RESULT MODAL -->
-		<button id="showDialog">Show Dialog</button>
+		<!-- <button id="showDialog">Show Dialog</button> -->
 		<dialog id="container-dialog-result">
 			<div id="winMessage">
 				<h2>Congratulations!<br />You've won against the Dark!</h2>
@@ -423,7 +353,7 @@
 		</dialog>
 
 		<!-- AUDIO CODE STARTS -->
-		<!-- <audio id="audioBeforeStart" loop>
+		<audio id="audioBeforeStart" loop>
 			<source
 				src="./audios/Harry Potter Theme Song_Htaj3o3JD8I.mp3"
 				type="audio/mpeg"
@@ -438,8 +368,16 @@
 				allow="autoplay"
 				loading="lazy"
 			/>
-		</audio> -->
-		<!-- <button id="startAudio">Start Audio</button> -->
+		</audio>
+		<audio id="audioWin" loop>
+			<source
+				src="./audios/Natoxie Ft Ti Couby - Fanm Paka Mérité Mwen (Clip Officiel).mp3"
+				type="audio/mpeg"
+				allow="autoplay"
+				loading="lazy"
+			/>
+		</audio>
+		<button id="stopAudio">Stop Audio</button>
 		<!-- <button id="toggleAudio">Toggle Audio</button> -->
 	</body>
 	<!-- BODY CODE ENDS -->

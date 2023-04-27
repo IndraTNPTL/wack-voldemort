@@ -62,6 +62,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	cursor: url("./img/magicWand100px.png"), auto;
 }
 
 html {
@@ -127,7 +128,7 @@ button {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-align: center;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 button :hover {
@@ -143,13 +144,7 @@ button :hover {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-align: center;
-	cursor: pointer;
-}
-
-h2.game-infos {
-	display: flex;
-	flex-direction: column;
-	color: rgb(114, 98, 85);
+	/* cursor: pointer; */
 }
 
 /* LANDING PAGE */
@@ -199,7 +194,7 @@ button#go-to-rules-cta {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-align: center;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 button#go-to-rules-cta:hover {
@@ -214,13 +209,13 @@ button#go-to-rules-cta:hover {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-align: center;
-	cursor: pointer;
+	/* cursor: pointer; */
 	animation: glowing-border 1s infinite;
 	background-color: rgb(236, 185, 57);
 	color: whitesmoke;
 }
 
-/* RULE STEP PAGE */
+/* RULES PAGE */
 div#rule-step {
 	display: none;
 }
@@ -263,8 +258,6 @@ div#rule-step {
 }
 
 #go-to-game-cta {
-	/* border: 2px solid rgb(236, 185, 57);
-	border-radius: 5px; */
 	background-color: rgb(114, 98, 85);
 	color: whitesmoke;
 	padding: 0.8rem;
@@ -277,7 +270,7 @@ div#rule-step {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-align: center;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 #go-to-game-cta:hover {
@@ -294,7 +287,7 @@ div#rule-step {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-align: center;
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 /* GAME PAGE */
@@ -312,24 +305,28 @@ div#game-page {
 	font-family: "Poppins", sans-serif;
 	font-size: 1.5rem;
 	text-align: center;
-	/* color: white; */
 	width: 70%;
 }
 
-/* START GAME BTN */
+h2.game-infos {
+	display: flex;
+	flex-direction: column;
+	color: rgb(114, 98, 85);
+}
 
+/* START GAME BTN */
 #start-game {
 	background-color: rgb(114, 98, 85);
 	color: whitesmoke;
 	border: none;
 	border-radius: 5px;
 	padding: 0.8rem;
-	margin: 1.5rem 0 2.3rem 0;
+	margin: 1.5rem auto 2.3rem auto;
 	font-family: "Poppins", sans-serif;
 	font-size: 1.4em;
 	font-weight: bold;
 	letter-spacing: 1px;
-	cursor: pointer;
+	/* cursor: pointer; */
 	transition: background-color 0.3s ease;
 	position: relative;
 	/* overflow: hidden; */
@@ -361,11 +358,6 @@ div#game-page {
 	grid-template-columns: repeat(3, 1fr);
 	max-width: 32em;
 	width: 67vw;
-	/* column-gap: 1%; */
-	/* row-gap: 1%; */
-
-	/* background-image: url("./img/bordeaux-bg.jpeg");
-	background-size: cover; */
 
 	margin: auto;
 }
@@ -378,7 +370,6 @@ div#game-page {
 	background-position: center;
 
 	border: 0.5px solid rgb(240, 199, 94);
-	/* border-color: #372e29; */
 	border-radius: 10px;
 	aspect-ratio: 1;
 	overflow: hidden;
@@ -400,15 +391,12 @@ div#game-page {
 /* PERSONA & CUP CSS */
 .hole[id="dobby"] {
 	background-image: url("./img/icons8-dobby-480.png");
+	z-index: 1;
 }
 
 .voldemort {
-	/* background-color: #372e29; */
 	background-image: url("./img/icons8-lord-voldemort-480.png");
-	/* display: block; /*TO REMOVE TO CHECK VDM 
-	position: relative;
-	bottom: 2%;
-	z-index: 1; */
+	z-index: 1;
 }
 
 /* RESULT MODALS */
@@ -419,8 +407,7 @@ button#showDialog {
 	background-color: #007bff;
 	color: whitesmoke;
 	border: none;
-	/* border-radius: 5px; */
-	cursor: pointer;
+	/* cursor: pointer; */
 }
 
 button#restartBtn {
@@ -428,21 +415,18 @@ button#restartBtn {
 	background-color: rgb(114, 98, 85);
 	color: whitesmoke;
 	border: none;
-	/* border-radius: 5px; */
 	padding: 0.8rem;
 	margin: 1.5rem 0;
 	font-family: "Poppins", sans-serif;
 	font-size: 1em;
 	font-weight: bold;
 	letter-spacing: 1px;
-	cursor: pointer;
+	/* cursor: pointer; */
 	position: relative;
 }
 
 dialog#container-dialog-result {
 	margin: auto;
-	/* width: 300px; */
-	/* padding: 20px; */
 
 	border: 3px solid whitesmoke;
 	animation: moving-border 2s infinite;
@@ -475,6 +459,35 @@ iframe {
 	margin-bottom: 1%;
 }
 
+#stopAudio {
+	display: inline-block;
+	background-color: rgb(55, 46, 41);
+	color: whitesmoke;
+	border: none;
+	padding: 0.8rem;
+	margin: 1.5rem 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 0.9em;
+	font-weight: 500;
+	letter-spacing: 1px;
+	/* cursor: pointer; */
+	position: relative;
+}
+#stopAudio:hover {
+	display: inline-block;
+	background-color: rgb(55, 46, 41);
+	color: rgb(240, 199, 94);
+	border: none;
+	padding: 0.8rem;
+	margin: 1.5rem 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 0.9em;
+	font-weight: 500;
+	letter-spacing: 1px;
+	/* cursor: pointer; */
+	position: relative;
+}
+
 @media (max-width: 450px) {
 	h1 {
 		font-size: 1.5rem;
@@ -498,21 +511,3 @@ iframe {
 		height: 34rem !important;
 	}
 }
-
-/* TO DELETE IF NOT NEEDED */
-/* .container-modal {
-}
-
-#win-modal-content {
-	display: block;
-	z-index: 1;
-	margin: 0 auto;
-	position: fixed;
-}
-
-#loose-modal-content {
-	display: block;
-	z-index: 1;
-	margin: 0 auto;
-	position: fixed;
-} */

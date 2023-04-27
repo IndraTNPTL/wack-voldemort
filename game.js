@@ -14,7 +14,7 @@ const winMessage = document.getElementById("winMessage");
 const looseMessage = document.getElementById("looseMessage");
 const gameResult = true;
 
-let timerSeconds = 90;
+let timerSeconds = 60;
 let score = document.getElementById("score");
 let gameInterval;
 let gameInProgress = false;
@@ -22,13 +22,29 @@ let gameInProgress = false;
 // AUDIO VARIABLES
 const audioBeforeStart = document.getElementById("audioBeforeStart");
 const audioAfterStart = document.getElementById("audioAfterStart");
-const startAudioBtn = document.getElementById("startAudio");
-const toggleAudio = document.getElementById("toggleAudio");
+const audioWin = document.getElementById("audioWin");
+const stopAudioBtn = document.getElementById("stopAudio");
+// const toggleAudio = document.getElementById("toggleAudio");
 
 function reset() {
+	timerSeconds = 60;
+	score.textContent = "0";
 	gameInProgress = false;
-	timerSeconds = 90;
-	score = document.getElementById("score");
+
+	allHoles.forEach((hole) => {
+		hole.classList.remove("voldemort");
+		hole.removeAttribute("id");
+	});
+
+	startBtn.style.display = "block";
+	timer.style.color = "rgb(114, 98, 85)";
+	score.style.color = "rgb(114, 98, 85)";
+
+	if (gameInterval) {
+		gameInterval.forEach((interval) => {
+			clearInterval(interval);
+		});
+	}
 }
 
 function startGame() {
@@ -49,7 +65,7 @@ function startGame() {
 		gameInterval.forEach((interval) => {
 			clearInterval(interval);
 		});
-	}, 90000); //CHANGE BEFORE ENDING CODE
+	}, 60000); //CHANGE BEFORE ENDING CODE
 }
 
 function countdownDecrease() {
@@ -69,12 +85,14 @@ function countdownDecrease() {
 		if (timerSeconds <= 0) {
 			clearInterval(countdown);
 			gameInProgress = false;
-			// audioBeforeStart.play();
-			// audioAfterStart.pause();
-			if (parseInt(score.textContent) >= 50) {
+			if (parseInt(score.textContent) >= 60) {
+				audioAfterStart.pause();
 				displayWinMessage();
-			} else if (parseInt(score.textContent) < 50) {
+				audioWin.play();
+			} else if (parseInt(score.textContent) < 60) {
+				audioAfterStart.pause();
 				displayLooseMessage();
+				audioBeforeStart.play();
 			}
 		}
 	}, 1000);
@@ -89,7 +107,7 @@ function peep() {
 				score.textContent = parseInt(score.textContent) + 1;
 				hole.classList.remove("voldemort");
 			} else if (hole.id === "dobby") {
-				score.textContent = parseInt(score.textContent) - 2;
+				score.textContent = parseInt(score.textContent) - 3;
 				hole.removeAttribute("id");
 			}
 		});
@@ -98,14 +116,11 @@ function peep() {
 	// At intervals = Choose a random hole -> Add class .voldemort -> Remove class .voldemort after a certain time
 	function voldemortAppears() {
 		const hole = allHoles[Math.floor(Math.random() * allHoles.length)];
-		if (hole.id === "dobby") {
-			hole.removeAttribute("id");
-			hole.classList.add("voldemort");
-		}
+		hole.classList.add("voldemort");
 
 		setTimeout(() => {
 			hole.classList.remove("voldemort");
-		}, 1200);
+		}, 1100);
 	}
 
 	// At intervals = Choose a random hole -> Add id #dobby -> Remove class .voldemort after a certain time
@@ -118,8 +133,8 @@ function peep() {
 		}, 1400);
 	}
 
-	const volId = setInterval(voldemortAppears, 1000);
-	const dobbyId = setInterval(dobbyAppears, 3000);
+	const volId = setInterval(voldemortAppears, 500);
+	const dobbyId = setInterval(dobbyAppears, 1500);
 	return [volId, dobbyId];
 }
 
@@ -139,8 +154,9 @@ function displayLooseMessage() {
 
 goToRulesBtn.addEventListener("click", () => {
 	ruleStep.style.display = "block";
+	ruleStep.scrollTop = 0;
 	landingPage.style.display = "none";
-	// audioBeforeStart.play();
+	audioBeforeStart.play();
 });
 
 goToGameBtn.addEventListener("click", () => {
@@ -155,23 +171,30 @@ startBtn.addEventListener("click", () => {
 	startBtn.style.display = "none";
 	timer.style.color = "#f0c75e";
 	score.style.color = "#f0c75e";
-	// audioBeforeStart.pause();
-	// audioAfterStart.play();
+	audioBeforeStart.pause();
+	audioAfterStart.play();
 });
 
 restartBtn.addEventListener("click", () => {
 	landingPage.style.display = "block";
+	landingPage.scrollTop = 0;
 	gamePage.style.display = "none";
 	ruleStep.style.display = "none";
 	resultDialog.close();
-	// audioBeforeStart.pause();
-	// audioAfterStart.pause();
+	audioBeforeStart.pause();
+	audioAfterStart.pause();
+	audioWin.pause();
 	reset();
 });
 
-// TO DELETE WHEN FINISH
-showDialogBtn.addEventListener("click", () => {
-	looseMessage.style.display = "block";
-	winMessage.style.display = "none";
-	resultDialog.showModal();
+stopAudioBtn.addEventListener("click", () => {
+	audioBeforeStart.pause();
+	audioAfterStart.pause();
+	audioWin.pause();
 });
+
+// showDialogBtn.addEventListener("click", () => {
+// 	looseMessage.style.display = "block";
+// 	winMessage.style.display = "none";
+// 	resultDialog.showModal();
+// });
