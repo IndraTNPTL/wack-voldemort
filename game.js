@@ -119,7 +119,7 @@ function peep() {
 
 		setTimeout(() => {
 			hole.classList.remove("voldemort");
-		}, 1400);
+		}, 1200);
 	}
 
 	// At intervals = Choose a random hole -> Add id #dobby -> Remove class .voldemort after a certain time
@@ -132,7 +132,7 @@ function peep() {
 		}, 1400);
 	}
 
-	const volId = setInterval(voldemortAppears, 800);
+	const volId = setInterval(voldemortAppears, 700);
 	const dobbyId = setInterval(dobbyAppears, 1500);
 	return [volId, dobbyId];
 }
