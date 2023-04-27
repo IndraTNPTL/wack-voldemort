@@ -90,14 +90,17 @@ function peep() {
 	// At intervals = Choose a random hole -> Add class .voldemort -> Remove class .voldemort after a certain time
 	function voldemortAppears() {
 		const hole = allHoles[Math.floor(Math.random() * allHoles.length)];
-		hole.classList.add("voldemort");
+		if (hole.id === "dobby") {
+			hole.removeAttribute("dobby");
+			hole.classList.add("voldemort");
+		}
 
 		setTimeout(() => {
 			hole.classList.remove("voldemort");
 		}, 1200);
 	}
 
-	// At intervals = Choose a random hole -> Add class .dobby -> Remove class .voldemort after a certain time
+	// At intervals = Choose a random hole -> Add id #dobby -> Remove class .voldemort after a certain time
 	function dobbyAppears() {
 		const hole = allHoles[Math.floor(Math.random() * allHoles.length)];
 		hole.id = "dobby";
@@ -134,6 +137,7 @@ goToRulesBtn.addEventListener("click", () => {
 
 goToGameBtn.addEventListener("click", () => {
 	gamePage.style.display = "block";
+	landingPage.style.display = "none";
 	ruleStep.style.display = "none";
 });
 
@@ -145,11 +149,13 @@ startBtn.addEventListener("click", () => {
 });
 
 restartBtn.addEventListener("click", () => {
+	landingPage.style.display = "block";
 	gamePage.style.display = "none";
-	ruleStep.style.display = "block";
+	ruleStep.style.display = "none";
 	resultDialog.close();
 });
 
+// TO DELETE WHEN FINISH
 showDialogBtn.addEventListener("click", () => {
 	looseMessage.style.display = "none";
 	winMessage.style.display = "block";

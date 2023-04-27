@@ -1,32 +1,30 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
-
-/* @font-face {
-	font-family: "Harry Potter";
-	src: url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.eot");
-	src: url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.eot?#iefix")
-			format("embedded-opentype"),
-		url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.woff2")
-			format("woff2"),
-		url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.woff")
-			format("woff"),
-		url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.ttf")
-			format("truetype"),
-		url("//db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.svg#Harry Potter")
-			format("svg");
-} */
 @keyframes moving-border {
 	0% {
-		border-color: #fff;
+		border-color: whitesmoke;
 		transform: translateY(0px);
 	}
 	50% {
-		border-color: #fff;
+		border-color: whitesmoke;
 		transform: translateY(10px);
 	}
 	100% {
-		border-color: #fff;
+		border-color: whitesmoke;
 		transform: translateY(0px);
+	}
+}
+
+@keyframes glowing-text {
+	0% {
+		text-shadow: 0 0 10px #ecb939, 0 0 20px #ecb939, 0 0 30px #ecb939,
+			0 0 40px #ecb939;
+	}
+	50% {
+		text-shadow: 0 0 20px #ecb939, 0 0 30px #ecb939, 0 0 40px #ecb939,
+			0 0 50px #ecb939;
+	}
+	100% {
+		text-shadow: 0 0 10px #ecb939, 0 0 20px #ecb939, 0 0 30px #ecb939,
+			0 0 40px #ecb939;
 	}
 }
 
@@ -46,10 +44,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,600;1,700&display=swap");
 
-*,
-*:before,
-*:after,
-*:hover {
+* {
 	box-sizing: border-box;
 	margin: 0;
 }
@@ -74,11 +69,11 @@ body {
 }
 
 h1 {
-	margin-top: 1.5rem;
 	text-align: center;
 	font-family: "Harry Potter";
 	font-size: 3.3rem;
 	letter-spacing: 0.2em;
+	margin-top: 1.5rem;
 
 	color: rgb(236, 185, 57);
 }
@@ -87,32 +82,94 @@ h2 {
 	font-size: 1.5rem;
 	color: rgb(114, 98, 85);
 }
-
-h2.game-infos {
-	display: flex;
-	flex-direction: column;
+.emphasis {
+	font-size: 1.5em;
 }
 
-div#game-page h2 {
-	color: rgb(114, 98, 85);
+.huffle-yellow {
+	color: rgb(236, 185, 57);
+	font-weight: bold;
+	background-color: rgb(55, 46, 41);
+	padding: 0 2% 0 2%;
 }
 
 p {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	text-align: center;
 }
 
 button {
-	padding: 0.5rem;
+	background-color: rgb(114, 98, 85);
+	color: whitesmoke;
+	padding: 0.8rem;
+	margin: 1.5rem 0;
+	border: none;
+	border-radius: 5px;
 
 	font-family: "Poppins", sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 1px;
 	text-align: center;
 	cursor: pointer;
+
+	position: relative;
 }
+
+.hufflepuff-banner {
+	position: relative;
+	top: -30px;
+}
+
+#landing-page > h2 {
+	font-family: "Harry Potter";
+	margin: 2% 0 4% 0;
+	font-size: 3.3rem;
+	letter-spacing: 0.3rem;
+}
+
+#landing-intro {
+	width: 50%;
+	margin: 0 auto;
+	padding: 2% 2% 2% 2%;
+	border-radius: 10px;
+	background-color: whitesmoke;
+	line-height: 2;
+	color: rgb(55, 46, 41);
+}
+
+#game-rules-section > h2 {
+	margin: 5% 0;
+	font-size: 2.7rem;
+	letter-spacing: 0.1em;
+	font-family: "Harry Potter";
+	color: rgb(55, 46, 41);
+}
+
+#game-rules-section > p {
+	margin: 3% 7%;
+	color: rgb(55, 46, 41);
+}
+
+button#go-to-rules-cta {
+	margin: 3rem 0 0 0;
+}
+
+h2.game-infos {
+	display: flex;
+	flex-direction: column;
+	color: rgb(114, 98, 85);
+}
+
+/* div#game-page h2 {
+	color: rgb(114, 98, 85);
+} */
 
 /* LANDING PAGE */
 div#landing-page {
 	display: block;
+	width: 90%;
+	max-width: 100%;
 }
 
 div#rule-step {
@@ -120,15 +177,30 @@ div#rule-step {
 }
 
 #game-rules-section {
-	margin: 9% 10% 5% 10%;
-	padding: 2% 2% 4% 2%;
+	margin: 9% 10% 2%;
+	padding: 2% 2% 5% 2%;
 	border-radius: 7px;
 	background-color: whitesmoke;
 }
 
 #go-to-game-cta {
-	border: 2px solid rgb(236, 185, 57);
-	border-radius: 5px;
+	/* border: 2px solid rgb(236, 185, 57);
+	border-radius: 5px; */
+	background-color: rgb(114, 98, 85);
+	color: whitesmoke;
+	padding: 0.8rem;
+	margin: 1.5rem 0;
+	border: none;
+	border-radius: 27px;
+
+	font-family: "Poppins", sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-align: center;
+	cursor: pointer;
+
+	position: relative;
 }
 
 /* GAME PAGE */
@@ -167,7 +239,7 @@ div#game-page {
 } */
 #start-game {
 	background-color: rgb(114, 98, 85);
-	color: #fff;
+	color: whitesmoke;
 	border: none;
 	border-radius: 27px;
 	padding: 0.8rem;
@@ -190,24 +262,9 @@ div#game-page {
 	animation: glowing-text 1s infinite;
 }
 
-@keyframes glowing-text {
-	0% {
-		text-shadow: 0 0 10px #ecb939, 0 0 20px #ecb939, 0 0 30px #ecb939,
-			0 0 40px #ecb939;
-	}
-	50% {
-		text-shadow: 0 0 20px #ecb939, 0 0 30px #ecb939, 0 0 40px #ecb939,
-			0 0 50px #ecb939;
-	}
-	100% {
-		text-shadow: 0 0 10px #ecb939, 0 0 20px #ecb939, 0 0 30px #ecb939,
-			0 0 40px #ecb939;
-	}
-}
-
 /* GAMEBOARD CSS */
 #board {
-	background-color: white;
+	background-color: whitesmoke;
 	width: 80vw;
 	height: 34rem;
 
@@ -239,6 +296,10 @@ div#game-page {
 	border: 0.4px solid lightsteelblue;
 	aspect-ratio: 1;
 	overflow: hidden;
+
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 .hole > img {
@@ -250,13 +311,31 @@ div#game-page {
 	top: 38%;
 }
 
-/* PERSONA CSS */
+/* PERSONA & CUP CSS */
+.hufflepuff-cup {
+	top: -16% !important;
+}
+
 .voldemort {
-	background-color: black;
+	display: none; /*TO REMOVE TO CHECK VDM */
+	position: relative;
+	bottom: 2%;
+	z-index: 1;
+}
+
+.voldemort img {
+	width: 57%;
 }
 
 #dobby {
-	background-color: blue;
+	/* background-color: blue; */
+	position: relative;
+	bottom: 2%;
+	z-index: 1;
+}
+
+#dobby img {
+	width: 57%;
 }
 
 /* RESULT MODALS */
@@ -265,18 +344,18 @@ button#showDialog {
 	display: inline-block;
 	padding: 10px 20px;
 	background-color: #007bff;
-	color: #fff;
+	color: whitesmoke;
 	border: none;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	cursor: pointer;
 }
 
 button#restartBtn {
 	display: inline-block;
 	background-color: rgb(114, 98, 85);
-	color: #fff;
+	color: whitesmoke;
 	border: none;
-	border-radius: 27px;
+	/* border-radius: 5px; */
 	padding: 0.8rem;
 	margin: 1.5rem 0;
 	font-family: "Poppins", sans-serif;
@@ -284,7 +363,6 @@ button#restartBtn {
 	font-weight: bold;
 	letter-spacing: 1px;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
 	position: relative;
 }
 
@@ -293,7 +371,7 @@ dialog#container-dialog-result {
 	/* width: 300px; */
 	/* padding: 20px; */
 
-	border: 3px solid #fff;
+	border: 3px solid whitesmoke;
 	animation: moving-border 2s infinite;
 	border-radius: 10px;
 	width: 30rem;
@@ -321,6 +399,7 @@ dialog#container-dialog-result {
 
 iframe {
 	right: -13%;
+	margin-bottom: 1%;
 }
 
 @media (max-width: 450px) {
@@ -330,6 +409,10 @@ iframe {
 
 	h2 {
 		font-size: 1.3rem;
+	}
+
+	#landing-page > h2 {
+		font-size: 2.5em;
 	}
 
 	#gridboard {
