@@ -488,6 +488,24 @@ iframe {
 	position: relative;
 }
 
+/* FOOTER CSS */
+
+.footer {
+	position: relative;
+	bottom: 7px;
+	font-size: 0.92rem;
+	color: rgb(114, 98, 85);
+}
+
+.copyright {
+	font-family: "Poppins";
+	font-size: 0.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 0.1rem;
+}
+
 @media (max-width: 450px) {
 	h1 {
 		font-size: 1.5rem;

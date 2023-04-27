@@ -24,7 +24,6 @@ const audioBeforeStart = document.getElementById("audioBeforeStart");
 const audioAfterStart = document.getElementById("audioAfterStart");
 const audioWin = document.getElementById("audioWin");
 const stopAudioBtn = document.getElementById("stopAudio");
-// const toggleAudio = document.getElementById("toggleAudio");
 
 function reset() {
 	timerSeconds = 60;
