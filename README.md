@@ -8,19 +8,19 @@ https://github.com/IndraTNPTL/wack-voldemort
 
 by: Indra Tinot-Patole
 
-## getting started
+# Getting started
 
 To get started with the game:
 
 -   URL game: https://indratnptl.github.io/wack-voldemort/
 
-## Game description
+# Game description
 
 This is my first project for IronHack bootcamp, made with HTML,CSS,JAVASCRIPT.
 
 Globally a Hufflepuff dedicated Wack-the-Mole game with Voldemort and Dobby!
 
-## What is the goal?
+# What is the goal?
 
 As a proud and loyal Hogward student / Hufflepuff, take revenge for Cedric Diggory's death during the Goblet of Fire competition and wack Voldemort!
 
@@ -31,25 +31,25 @@ But if Dobby is hits, you'll loose 2 points.
 
 Try to reach 65 points in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
 
-## Why?
+# Why?
 
 I wanted to make a fun and simple game around the Hufflepuff house universe.
 This house is always forgotten, even if (let's be honest!) it is the best house of Hogward!
 
-## Features:
+# Features:
 
 -   Random apparition
 -   Score & timer
 -   Music
 
-## What's next?
+# What's next?
 
 -   Responsive and Mobile friendly
 -   Difficulty levels
 -   Improve CSS
 -   Add more characters
--   Let the user choose his house and story in order to defeat Voldemort
+-   Let the user choose his house and story in order to defeat the Dark
 
-# demo:
+# Demo link:
 
 https://indratnptl.github.io/wack-voldemort/
