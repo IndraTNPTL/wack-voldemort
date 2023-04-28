@@ -1,6 +1,26 @@
+<!-- Repository link -->
+
+https://github.com/IndraTNPTL/wack-voldemort
+
+<!--  -->
+
 # wack-voldemort
 
-Globally a wack a mole game but with Voldemort head XD
+by: Indra Tinot-Patole
+
+## getting started
+
+To get started with the game:
+
+-   URL game: https://indratnptl.github.io/wack-voldemort/
+
+## Game description
+
+This is my first project for IronHack bootcamp, made with HTML,CSS,JAVASCRIPT.
+
+Globally a Hufflepuff dedicated Wack-the-Mole game with Voldemort and Dobby!
+
+## What is the goal?
 
 As a proud and loyal Hogward student / Hufflepuff, take revenge for Cedric Diggory's death during the Goblet of Fire competition and wack Voldemort!
 
@@ -9,32 +29,27 @@ But be careful, Dobby (as usual) is hanging around places that he is not suppose
 Everytime you hit Voldemort, you gain 1 point.
 But if Dobby is hits, you'll loose 2 points.
 
-Try to reach 60 pts in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
+Try to reach 65 points in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
 
-<!-- Repository link -->
+## Why?
 
-https://github.com/IndraTNPTL/wack-voldemort
+I wanted to make a fun and simple game around the Hufflepuff house universe.
+This house is always forgotten, even if (let's be honest!) it is the best house of Hogward!
 
-<!-- Hogwart house colors + font if needed -->
+## Features:
 
-https://codepen.io/Jill-Lambert/pen/bwevpB
-https://www.color-hex.com/color-palette/816
+-   Random apparition
+-   Score & timer
+-   Music
 
-<!-- Button CSS inspo -->
+## What's next?
 
-https://cssgradient.io/gradient-backgrounds/
+-   Responsive and Mobile friendly
+-   Difficulty levels
+-   Improve CSS
+-   Add more characters
+-   Let the user choose his house and story in order to defeat Voldemort
 
-<!-- Game from class inspo -->
+# demo:
 
-https://github.com/WebDev-Paris-104/W2D4/blob/main/style.css
-
-<!-- Help game -->
-
-https://www.aldohadinata.com/how-to-make-a-simple-whack-a-mole-game-in-javascript/
-
-<!-- height: calc(80vh - 5rem);
-aspect-ratio: 9/16; -->
-
-<!-- ERRORS -->
-
-Me prendre la tete sur la coupe de hufflepuff comme hole et comment le disposer dans la grille en ne genant pas l'apparition des personnages alors que vrai affictionado saura que la coupe n'existe plus de toute façon dans l'histoire...XD
+https://indratnptl.github.io/wack-voldemort/
