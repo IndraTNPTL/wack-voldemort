@@ -84,11 +84,11 @@ function countdownDecrease() {
 		if (timerSeconds <= 0) {
 			clearInterval(countdown);
 			gameInProgress = false;
-			if (parseInt(score.textContent) >= 60) {
+			if (parseInt(score.textContent) >= 65) {
 				audioAfterStart.pause();
 				displayWinMessage();
 				audioWin.play();
-			} else if (parseInt(score.textContent) < 60) {
+			} else if (parseInt(score.textContent) < 65) {
 				audioAfterStart.pause();
 				displayLooseMessage();
 				audioBeforeStart.play();

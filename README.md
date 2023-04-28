@@ -9,7 +9,7 @@ But be careful, Dobby (as usual) is hanging around places that he is not suppose
 Everytime you hit Voldemort, you gain 1 point.
 But if Dobby is hits, you'll loose 2 points.
 
-Try to reach 45 pts in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
+Try to reach 60 pts in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
 
 <!-- Repository link -->
 
