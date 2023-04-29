@@ -13,6 +13,7 @@ by: Indra Tinot-Patole
 To get started with the game:
 
 -   URL game: https://indratnptl.github.io/wack-voldemort/
+-   Game presentation : https://docs.google.com/presentation/d/1w8jeBIPXmaupKpfisExZNFuoLDBAXrvJcTmd4t7CHcQ/edit#slide=id.p
 
 # Game description
 
@@ -29,7 +30,7 @@ But be careful, Dobby (as usual) is hanging around places that he is not suppose
 Everytime you hit Voldemort, you gain 1 point.
 But if Dobby is hits, you'll loose 2 points.
 
-Try to reach 65 points in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
+Try to reach 55 points in order to win against The Dark Lord Who-Must-Not-Be-Named and avenge Cedric and the Hufflepuff house.
 
 # Why?
 

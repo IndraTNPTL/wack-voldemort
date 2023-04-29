@@ -1,7 +1,7 @@
 // GAME VARIABLES
 const landingPage = document.getElementById("landing-page");
 const goToRulesBtn = document.getElementById("go-to-rules-cta");
-const ruleStep = document.getElementById("rule-step");
+const rulePage = document.getElementById("rule-step");
 const goToGameBtn = document.getElementById("go-to-game-cta");
 const gamePage = document.getElementById("game-page");
 const startBtn = document.getElementById("start-game");
@@ -13,10 +13,11 @@ const resultDialog = document.getElementById("container-dialog-result");
 const winMessage = document.getElementById("winMessage");
 const looseMessage = document.getElementById("looseMessage");
 const gameResult = true;
+const winScore = 55;
 
 let timerSeconds = 60;
 let score = document.getElementById("score");
-let gameInterval;
+let gameInterval = [];
 let gameInProgress = false;
 
 // AUDIO VARIABLES
@@ -84,11 +85,11 @@ function countdownDecrease() {
 		if (timerSeconds <= 0) {
 			clearInterval(countdown);
 			gameInProgress = false;
-			if (parseInt(score.textContent) >= 50) {
+			if (parseInt(score.textContent) >= 55) {
 				audioAfterStart.pause();
 				displayWinMessage();
 				audioWin.play();
-			} else if (parseInt(score.textContent) < 50) {
+			} else if (parseInt(score.textContent) < 55) {
 				audioAfterStart.pause();
 				displayLooseMessage();
 				audioBeforeStart.play();
@@ -108,6 +109,9 @@ function peep() {
 			} else if (hole.id === "dobby") {
 				score.textContent = parseInt(score.textContent) - 3;
 				hole.removeAttribute("id");
+			}
+			if (parseInt(score.textContent) >= winScore) {
+				endGame();
 			}
 		});
 	});
@@ -149,11 +153,21 @@ function displayLooseMessage() {
 	resultDialog.showModal();
 }
 
+function endGame() {
+	gameInterval.forEach((interval) => {
+		clearInterval(interval);
+	});
+	gameInProgress = false;
+	audioAfterStart.pause();
+	displayWinMessage();
+	audioWin.play();
+}
+
 // EVENT LISTENERS
 
 goToRulesBtn.addEventListener("click", () => {
-	ruleStep.style.display = "block";
-	ruleStep.scrollTop = 0;
+	rulePage.style.display = "block";
+	rulePage.scrollTop = 0;
 	landingPage.style.display = "none";
 	audioBeforeStart.play();
 });
@@ -162,7 +176,7 @@ goToGameBtn.addEventListener("click", () => {
 	gamePage.style.display = "block";
 	gamePage.scrollTop = 0;
 	landingPage.style.display = "none";
-	ruleStep.style.display = "none";
+	rulePage.style.display = "none";
 });
 
 startBtn.addEventListener("click", () => {
@@ -172,14 +186,16 @@ startBtn.addEventListener("click", () => {
 	score.style.color = "#f0c75e";
 	audioBeforeStart.pause();
 	audioAfterStart.play();
-	allHoles.style.border = "none";
+	allHoles.forEach((hole) => {
+		holes.style.border = "none";
+	});
 });
 
 restartBtn.addEventListener("click", () => {
 	landingPage.style.display = "block";
 	landingPage.scrollTop = 0;
 	gamePage.style.display = "none";
-	ruleStep.style.display = "none";
+	rulePage.style.display = "none";
 	resultDialog.close();
 	audioBeforeStart.pause();
 	audioAfterStart.pause();
