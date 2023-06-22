@@ -74,6 +74,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+	/* height: 100vh; */
 
 	display: flex;
 	align-items: center;
@@ -506,26 +507,91 @@ iframe {
 	letter-spacing: 0.1rem;
 }
 
+a {
+	color: rgb(114, 98, 85);
+	text-decoration: none;
+}
+
 @media (max-width: 450px) {
 	h1 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	h2 {
 		font-size: 1.3rem;
 	}
 
+	p {
+		font-size: 1rem;
+		line-height: 2;
+	}
+
 	#landing-page > h2 {
 		font-size: 2.5em;
 	}
 
+	#landing-intro {
+		width: 80%;
+		margin: 4em auto;
+		padding: 3% 3% 3% 3%;
+	}
+
+	.emphasis {
+		font-size: 1em;
+	}
+
+	button#go-to-rules-cta {
+		margin: 2rem 0 0 0;
+	}
+
+	#go-to-game-cta {
+		margin: 2rem 0 0.2em;
+	}
+
 	#gridboard {
-		align-items: flex-end;
-		height: 67vh;
+		align-items: center;
+		height: 43vh;
 		border-radius: 25px;
+		width: 80vw;
+		max-width: none;
 	}
 
 	#board {
-		height: 34rem !important;
+		height: 27rem !important;
+		width: 83vw;
+		margin: 2em auto;
+	}
+
+	.hufflepuff-banner {
+		width: 23em;
+		top: -40px;
+	}
+
+	#game-rules-section {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	#rule-step > h2 {
+		margin: 0.5em 0 0.5em 0;
+		font-size: 4rem;
+	}
+
+	#signature {
+		left: 2rem;
+		font-size: 1.7rem;
+	}
+
+	.harry-pawter-img {
+		width: 9rem;
+		left: 4em;
+	}
+
+	div#game-page {
+		width: 100vw;
+	}
+
+	.hole {
+		background-size: 7.7em;
 	}
 }

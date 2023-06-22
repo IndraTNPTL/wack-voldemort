@@ -187,7 +187,7 @@ startBtn.addEventListener("click", () => {
 	audioBeforeStart.pause();
 	audioAfterStart.play();
 	allHoles.forEach((hole) => {
-		holes.style.border = "none";
+		hole.style.border = "none";
 	});
 });
 
