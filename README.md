@@ -43,6 +43,9 @@ This house is always forgotten, even if (let's be honest!) it is the best house 
 -   Score & timer
 -   Music
 
+# Screenshots:
+![Capture d’écran, le 2023-08-09 à 18 33 13](https://github.com/IndraTNPTL/wack-voldemort/assets/126521804/4d5b2955-bd44-4576-827d-798e07bd511d)
+
 # What's next?
 
 -   Responsive and Mobile friendly
